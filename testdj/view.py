@@ -18,3 +18,8 @@ def hello2(request):
 def helloextends(request):
     context = {'hello': 'hello world'}
     return render(request, 'helloextends.html', context)
+
+
+def base(request):
+    context = {'hello': 'hello world'}
+    return render(request, 'base.html', context)
