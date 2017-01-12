@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ hello }}</h1>
+{% if 1 == 1 %}
+    1
+{% elif 2 == 2 %}
+    2
+{% else %}
+    3
+{% endif %}
+
+<ul>
+    {% for athlete in athlete_list %}
+        <li>{{ athlete.name }}</li>
+    {% endfor %}
+    {% for foo in list %}
+        {{ foo.name }}
+    {% endfor %}
+
+</ul>
+
+{% ifequal 'test' 'dress' %}
+    test dress
+{% else %}
+    else
+{% endifequal %}
+
+{# comment #}
+</body>
+</html>

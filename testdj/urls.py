@@ -23,6 +23,8 @@ Including another URLconf
 from django.conf.urls import *
 
 from testdj.view import hello
+from testdj.view import hello2
+from testdj.view import helloextends
 from testdj.view import init
 
-urlpatterns = [url('^hello/$', hello), url('', init)]
+urlpatterns = [url('^helloextends/$', helloextends), url('^hello2/$', hello2), url('^hello/$', hello), url('', init)]
