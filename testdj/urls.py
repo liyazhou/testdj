@@ -22,13 +22,17 @@ Including another URLconf
 # ]
 from django.conf.urls import *
 
+from testdj.testdb import delete_db
+from testdj.testdb import get_db
 from testdj.testdb import testdb
+from testdj.testdb import update_db
 from testdj.view import base
 from testdj.view import hello
 from testdj.view import hello2
 from testdj.view import helloextends
 from testdj.view import init
 
-urlpatterns = [url('^testdb/$', testdb), url('^base/$', base), url('^helloextends/$', helloextends),
+urlpatterns = [url('^delete_db/$', delete_db), url('^update_db/$', update_db), url('^get_db/$', get_db),
+               url('^testdb/$', testdb), url('^base/$', base), url('^helloextends/$', helloextends),
                url('^hello2/$', hello2),
                url('^hello/$', hello), url('', init)]
