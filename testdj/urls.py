@@ -22,6 +22,8 @@ Including another URLconf
 # ]
 from django.conf.urls import *
 
+from testdj.search import search
+from testdj.search import search_form
 from testdj.testdb import delete_db
 from testdj.testdb import get_db
 from testdj.testdb import testdb
@@ -32,7 +34,8 @@ from testdj.view import hello2
 from testdj.view import helloextends
 from testdj.view import init
 
-urlpatterns = [url('^delete_db/$', delete_db), url('^update_db/$', update_db), url('^get_db/$', get_db),
+urlpatterns = [url('^search_form/$', search_form), url('^search/$', search),
+               url('^delete_db/$', delete_db), url('^update_db/$', update_db), url('^get_db/$', get_db),
                url('^testdb/$', testdb), url('^base/$', base), url('^helloextends/$', helloextends),
                url('^hello2/$', hello2),
                url('^hello/$', hello), url('', init)]
